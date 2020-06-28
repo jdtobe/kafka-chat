@@ -12,8 +12,8 @@ services:
       - "9092:9092"
     hostname: kafka
     environment:
-      KAFKA_CREATE_TOPICS: "test:1:1" # topic:partition:replicas
-      KAFKA_ADVERTISED_HOST_NAME: kafka # docker-machine ip
+      KAFKA_CREATE_TOPICS: "example-stream:1:1" # topic:partition:replicas
+      KAFKA_ADVERTISED_HOST_NAME: localhost # docker-machine ip
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_ADVERTISED_PORT: 9092
     volumes:
